@@ -1,0 +1,16 @@
+<h2>This is master</h2>
+<h3>All points for all time
+  {{ totalRating }}</h3>
+<button mat-button (click)="decreaseFirst()">
+  <span class="fa fa-thumbs-down fa-lg"></span>
+</button>
+<app-user-detail
+  *ngFor="let user of users"
+  [user]="user"
+  [id]="user.id"
+  (voted) = "onVoted($event)"
+
+
+
+></app-user-detail>
+
